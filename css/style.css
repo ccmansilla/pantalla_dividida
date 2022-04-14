@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 50%;
+    color: white;
+    padding: 30px;
+}
+
+.main__section__texto {
+    background-color: rgb(3, 26, 26);
+}
+
+.main__section__texto__title {
+    background-color: rgb(10, 90, 90);
+    color: gold;
+    font-size: 3rem;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main__section__texto p {
+    font-size: 1.3rem;
+    padding: 5px;
+}
+
+.main__section__logo {
+    background-color: rgb(10, 90, 90);
+    text-align: center;
+}
+
+.main__section__logo img{
+    width: 20%;
+    height: 100%;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 20%;
+    }
+}
+
+.main__div__img {
+    width: 50%;
+    height: 100%;
+    background-image: url('../img/chevrolet_astra.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-duration: 6s;
+    animation-name: in;
+}
+  
+@keyframes in {
+    from {
+        background-image: none;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        
+    }
+
+    to {
+        background-image: url('../img/chevrolet_astra.jpg');
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+}  
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    section, .main__div__img {
+        width: 100%;
+    }
+}
