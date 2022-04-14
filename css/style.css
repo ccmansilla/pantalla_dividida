@@ -89,6 +89,7 @@ section {
 @media (max-width: 900px) {
     main {
         flex-direction: column;
+        height: 200vh;
     }
     section, .main__div__img {
         width: 100%;
